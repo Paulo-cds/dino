@@ -74,13 +74,13 @@ function createCactus() {
         document.querySelector('.cactus').style.backgroundImage = "url('./images/turtle.png')";
         document.querySelector('.cactus').style.width = '90px';        
       }
-      /*
+      
       if(pontos > 3000){
         document.querySelector('.cactus').style.backgroundImage = "url('./images/pngwing.com.png')";
 
         document.querySelector('.cactus').style.width = '150px';
         document.querySelector('.cactus').style.height = '150px';
-      } */
+      } 
     
       if (cactusPosition < -140) {
         // Saiu da tela
