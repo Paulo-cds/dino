@@ -1,0 +1,110 @@
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {    
+ 
+    .background {
+        position: absolute;
+        bottom: 0px;
+        background-image: url('./images/backmario.jpg');
+        background-repeat: repeat-x;
+        background-size: contain;
+        background-position: bottom;
+        animation: slideright 170s infinite linear;
+        -webkit-animation: slideright 170s infinite linear;
+        width: 100%;
+        height: 100vh;   
+    }
+  
+  
+    .dino {
+        position: absolute;
+        bottom: 25px;        
+        background-image: url('./images/iudi.gif');
+        background-position: top;
+        background-size: cover; 
+        width: 140px;
+        height: 150px;
+    }
+    
+    .cactus {
+        position: absolute;
+        width: 60px;
+        height: 100px;
+        bottom: 25px;
+        background-image: url('./images/planta.png');
+        background-position: center;
+        background-size: cover;     
+    }
+    
+    
+    .game-over {
+        text-align: center;
+        color: rgb(252, 246, 246);
+        height: 100vh;
+        font-family: arial; 
+        position: absolute;
+        bottom: 0px;
+        background-image: url('https://cdn.vox-cdn.com/thumbor/3MFYPyqgxJksM66PjPDKlJIHH1k=/0x0:1531x861/1400x1050/filters:focal(644x309:888x553):format(jpeg)/cdn.vox-cdn.com/uploads/chorus_image/image/55584745/maxresdefault.0.jpg');
+        width: 100%;
+        background-repeat: no-repeat;               
+        background-size: 100% 100vh;
+        
+
+        h1{
+            margin: 2% 0;
+        }
+        
+
+        h3{
+            text-align: center;
+            color: rgb(252, 246, 246);
+            display: flex;
+            justify-content: center;
+            width: 100%;
+        }
+    }
+
+    .restart {
+        display:flex;
+        background-color: white;
+        color: black;
+        font-size: 1em;
+        font-weight: bold;
+        padding: 3px;
+        border-radius: 5px;
+        margin: 1px solid black;
+        position: absolute;
+        top: 35%;
+        left: 48%;
+        justify-content: center;
+        align-items: center;
+        width: 5rem;
+        height: 3rem;
+        cursor: pointer;
+
+        &:hover{
+            background-color: red;
+            color: yellow;
+            width: 6rem;
+            box-shadow: 2px 2px 5px black;
+            left:48%;
+        }
+    }
+    
+    @keyframes slideright {
+        from {
+            background-position: 1500%;
+        }
+        to {
+            background-position: 0%;
+        }
+    }
+    
+    
+
+}
