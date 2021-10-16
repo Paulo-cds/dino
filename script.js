@@ -1,14 +1,54 @@
 const dino = document.querySelector('.dino');
 const background = document.querySelector('.background');
+const start = document.querySelector('.start');
 
 
 let isJumping = false;
 let isGameOver = false;
-let position = 25;
-let round = 0
-let control = 3
+let position = 250;
+let round = 0;
+let control = 3;
 let speed = 5;
 let pontos = 0;
+
+function iniciar(){
+  document.querySelector('.background').style.display =  'block';
+  document.querySelector('.start').style.display =  'none';
+  dino.style.bottom = '25px';
+  
+  pontos = 0;
+  jumpInicial()
+}
+
+function jumpInicial(){
+  
+  let upInterval = setInterval(() => {
+    if (position >= 150) {
+      // Descendo
+      clearInterval(upInterval);
+
+      let downInterval = setInterval(() => {
+        if (position <= 40) {
+          clearInterval(downInterval);
+          isJumping = false;
+          
+        } else {
+          position -= 60;
+          dino.style.bottom = position + 'px';
+        }
+      }, 70);
+    } else {
+      // Subindo
+      
+      position += 60;
+      dino.style.bottom = position + 'px';
+      
+    }
+
+    
+    
+  }, 100);
+}
 
 
 function handleKeyDown(event) {
@@ -86,13 +126,13 @@ function createCactus() {
         // Saiu da tela
         clearInterval(leftTimer);
         background.removeChild(cactus);        
-      } else if (cactusPosition > 0 && cactusPosition < 140 && position < 60) {
+      }  else if (cactusPosition > 0 && cactusPosition < 140 && position < 60) {
         // Game over
         clearInterval(leftTimer);
         isGameOver = true;       
         document.body.innerHTML = `<div class="game-over"><h1>${pontos} </br> Pontos</h1><h3> </h3></div> <button class='restart' onclick=reload()>  Reiniciar </button>`; 
         document.querySelector('.reload').style.display = 'flex';
-      }  else { 
+      }   else { 
         cactusPosition -= speed;
         cactus.style.left = cactusPosition + 'px';
         pontos += 2;

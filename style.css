@@ -5,7 +5,55 @@
           box-sizing: border-box;
 }
 
+body .start {
+  text-align: center;
+  color: #fcf6f6;
+  height: 100vh;
+  font-family: arial;
+  position: absolute;
+  bottom: 0px;
+  background-image: url("https://s.yimg.com/ny/api/res/1.2/pqPAqCFJfTIZyBghaYudAQ--/YXBwaWQ9aGlnaGxhbmRlcjt3PTEyMDA7aD04MDA-/https://s.yimg.com/uu/api/res/1.2/iff2S4PnCJEX2kebJkjuog--~B/aD03Njg7dz0xMzY2O2FwcGlkPXl0YWNoeW9u/https://media.zenfs.com/pt/canal_tech_990/0c2850074dd634248cef1eb239cdad6d");
+  width: 100%;
+  background-repeat: no-repeat;
+  background-size: 100% 100vh;
+}
+
+body .start .inicio {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background-color: white;
+  color: black;
+  font-size: 1em;
+  font-weight: bold;
+  padding: 3px;
+  border-radius: 5px;
+  margin: 1px solid black;
+  position: absolute;
+  top: 50%;
+  left: 48%;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 5rem;
+  height: 3rem;
+  cursor: pointer;
+}
+
+body .start .inicio:hover {
+  background-color: red;
+  color: yellow;
+  width: 6rem;
+  -webkit-box-shadow: 2px 2px 5px black;
+          box-shadow: 2px 2px 5px black;
+  left: 48%;
+}
+
 body .background {
+  display: none;
   position: absolute;
   bottom: 0px;
   background-image: url("./images/backmario.jpg");
@@ -20,7 +68,7 @@ body .background {
 
 body .dino {
   position: absolute;
-  bottom: 25px;
+  bottom: 250px;
   background-image: url("./images/iudi.gif");
   background-position: top;
   background-size: cover;
