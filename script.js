@@ -61,6 +61,10 @@ function handleKeyDown(event) {
     }
 }
 
+document.body.addEventListener('touchstart', function() {
+  jump();
+});
+
 function jump() {
     isJumping = true;
     console.log(round)
