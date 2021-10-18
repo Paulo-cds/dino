@@ -43,7 +43,7 @@ body .start .inicio {
   cursor: pointer;
 }
 
-@media (max-width: 700px) {
+@media (max-width: 750px) {
   body .start .inicio {
     left: 43%;
   }
@@ -58,7 +58,7 @@ body .start .inicio:hover {
   left: 48%;
 }
 
-@media (max-width: 700px) {
+@media (max-width: 750px) {
   body .start .inicio:hover {
     left: 43%;
   }
@@ -99,7 +99,7 @@ body .cactus {
   background-size: cover;
 }
 
-@media (max-width: 700px) {
+@media (max-width: 750px) {
   body .cactus {
     bottom: 10px;
   }
@@ -118,7 +118,7 @@ body .game-over {
   background-size: 100% 100vh;
 }
 
-@media (max-width: 700px) {
+@media (max-width: 750px) {
   body .game-over {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -136,7 +136,7 @@ body .game-over h2 {
   margin: 2% 0 1% 0;
 }
 
-@media (max-width: 700px) {
+@media (max-width: 750px) {
   body .game-over h2 {
     width: 50%;
     display: block;
@@ -156,7 +156,7 @@ body .game-over h3 {
   width: 100%;
 }
 
-@media (max-width: 700px) {
+@media (max-width: 750px) {
   body .game-over h3 {
     width: 50%;
     display: block;
@@ -189,7 +189,7 @@ body .restart {
   cursor: pointer;
 }
 
-@media (max-width: 700px) {
+@media (max-width: 750px) {
   body .restart {
     left: 43%;
   }
@@ -204,7 +204,7 @@ body .restart:hover {
   left: 48%;
 }
 
-@media (max-width: 700px) {
+@media (max-width: 750px) {
   body .restart:hover {
     left: 43%;
   }
