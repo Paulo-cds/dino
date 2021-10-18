@@ -123,8 +123,8 @@ function createCactus() {
       if(pontos > 3000){
         document.querySelector('.cactus').style.backgroundImage = "url('./images/goomba.png')";
 
-        document.querySelector('.cactus').style.width = '150px';
-        document.querySelector('.cactus').style.height = '150px';
+        document.querySelector('.cactus').style.width = '90px';
+       // document.querySelector('.cactus').style.height = '150px';
       } 
     
       if (cactusPosition < -140) {
