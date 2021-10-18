@@ -37,6 +37,10 @@ body {
             width: 5rem;
             height: 3rem;
             cursor: pointer;
+
+            @media(max-width: 650px){
+                left: 43%;
+            }
     
             &:hover{
                 background-color: red;
@@ -44,6 +48,10 @@ body {
                 width: 6rem;
                 box-shadow: 2px 2px 5px black;
                 left:48%;
+
+                @media(max-width: 650px){
+                    left: 43%;
+                }
             }
         }
     }
@@ -71,6 +79,7 @@ body {
         background-size: cover; 
         width: 140px;
         height: 150px;
+        left: 5%;
     }
     
     .cactus {
@@ -80,7 +89,11 @@ body {
         bottom: 25px;
         background-image: url('./images/planta.png');
         background-position: center;
-        background-size: cover;     
+        background-size: cover;   
+        
+        @media(max-width: 650px){
+            bottom: 10px;
+        }
     }
     
     
@@ -95,10 +108,24 @@ body {
         width: 100%;
         background-repeat: no-repeat;               
         background-size: 100% 100vh;
+
+        @media(max-width: 650px){
+            display: flex;
+            
+            align-items: center;
+            justify-content: center;
+        }
         
 
-        h1{
-            margin: 2% 0;
+        h2{
+            margin: 2% 0 1% 0;
+
+            @media(max-width: 650px){
+                width: 50%;
+                display: block;
+                margin: 15% 0 0 10%;
+            }
+        
         }
         
 
@@ -108,7 +135,15 @@ body {
             display: flex;
             justify-content: center;
             width: 100%;
+
+            @media(max-width: 650px){
+                width: 50%;
+                display: block;
+                margin: 15% 10% 0 0;
+            }
         }
+
+        
     }
 
     .restart {
@@ -129,12 +164,20 @@ body {
         height: 3rem;
         cursor: pointer;
 
+        @media(max-width: 650px){
+            left: 43%;
+        }
+
         &:hover{
             background-color: red;
             color: yellow;
             width: 6rem;
             box-shadow: 2px 2px 5px black;
             left:48%;
+
+            @media(max-width: 650px){
+                left: 43%;
+            }
         }
     }
     

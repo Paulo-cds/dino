@@ -43,6 +43,12 @@ body .start .inicio {
   cursor: pointer;
 }
 
+@media (max-width: 650px) {
+  body .start .inicio {
+    left: 43%;
+  }
+}
+
 body .start .inicio:hover {
   background-color: red;
   color: yellow;
@@ -50,6 +56,12 @@ body .start .inicio:hover {
   -webkit-box-shadow: 2px 2px 5px black;
           box-shadow: 2px 2px 5px black;
   left: 48%;
+}
+
+@media (max-width: 650px) {
+  body .start .inicio:hover {
+    left: 43%;
+  }
 }
 
 body .background {
@@ -74,6 +86,7 @@ body .dino {
   background-size: cover;
   width: 140px;
   height: 150px;
+  left: 5%;
 }
 
 body .cactus {
@@ -84,6 +97,12 @@ body .cactus {
   background-image: url("./images/planta.png");
   background-position: center;
   background-size: cover;
+}
+
+@media (max-width: 650px) {
+  body .cactus {
+    bottom: 10px;
+  }
 }
 
 body .game-over {
@@ -99,8 +118,30 @@ body .game-over {
   background-size: 100% 100vh;
 }
 
-body .game-over h1 {
-  margin: 2% 0;
+@media (max-width: 650px) {
+  body .game-over {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+}
+
+body .game-over h2 {
+  margin: 2% 0 1% 0;
+}
+
+@media (max-width: 650px) {
+  body .game-over h2 {
+    width: 50%;
+    display: block;
+    margin: 15% 0 0 10%;
+  }
 }
 
 body .game-over h3 {
@@ -113,6 +154,14 @@ body .game-over h3 {
       -ms-flex-pack: center;
           justify-content: center;
   width: 100%;
+}
+
+@media (max-width: 650px) {
+  body .game-over h3 {
+    width: 50%;
+    display: block;
+    margin: 15% 10% 0 0;
+  }
 }
 
 body .restart {
@@ -140,6 +189,12 @@ body .restart {
   cursor: pointer;
 }
 
+@media (max-width: 650px) {
+  body .restart {
+    left: 43%;
+  }
+}
+
 body .restart:hover {
   background-color: red;
   color: yellow;
@@ -147,6 +202,12 @@ body .restart:hover {
   -webkit-box-shadow: 2px 2px 5px black;
           box-shadow: 2px 2px 5px black;
   left: 48%;
+}
+
+@media (max-width: 650px) {
+  body .restart:hover {
+    left: 43%;
+  }
 }
 
 @-webkit-keyframes slideright {

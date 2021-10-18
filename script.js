@@ -10,13 +10,14 @@ let round = 0;
 let control = 3;
 let speed = 5;
 let pontos = 0;
+let cactusPosition = 1200;
 
 function iniciar(){
   document.querySelector('.background').style.display =  'block';
   document.querySelector('.start').style.display =  'none';
-  dino.style.bottom = '25px';
-  
+  dino.style.bottom = '25px';  
   pontos = 0;
+  cactusPosition = 1200;
   jumpInicial()
 }
 
@@ -100,7 +101,7 @@ function jump() {
 
 function createCactus() {
     const cactus = document.createElement('div');
-    let cactusPosition = 1200;
+    cactusPosition = 1200;
     let randomTime = Math.random() * 6000;
 
     
@@ -120,7 +121,7 @@ function createCactus() {
       }
       
       if(pontos > 3000){
-        document.querySelector('.cactus').style.backgroundImage = "url('./images/pngwing.com.png')";
+        document.querySelector('.cactus').style.backgroundImage = "url('./images/goomba.png')";
 
         document.querySelector('.cactus').style.width = '150px';
         document.querySelector('.cactus').style.height = '150px';
@@ -130,15 +131,15 @@ function createCactus() {
         // Saiu da tela
         clearInterval(leftTimer);
         background.removeChild(cactus);        
-      }  else if (cactusPosition > 0 && cactusPosition < 140 && position < 60) {
+      }  else if (cactusPosition > 0 && cactusPosition < 130 && position < 60) {
         // Game over
         clearInterval(leftTimer);
         isGameOver = true;       
-        document.body.innerHTML = `<div class="game-over"><h1>${pontos} </br> Pontos</h1><h3> </h3></div> <button class='restart' onclick=reload()>  Reiniciar </button>`; 
+        document.body.innerHTML = `<div class="game-over"><h2>${pontos}  </h2><h3> Pontos</h3></div> <button class='restart' onclick=reload()>  Reiniciar </button>`; 
         document.querySelector('.reload').style.display = 'flex';
       }   else { 
         cactusPosition -= speed;
-        cactus.style.left = cactusPosition + 'px';
+        cactus.style.left = cactusPosition + 'px';        
         pontos += 2;
 
         if(round === control) {
