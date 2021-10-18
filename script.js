@@ -115,12 +115,12 @@ function createCactus() {
   
     let leftTimer = setInterval(() => {
 
-       if(pontos > 1500){
+       if(pontos > 1500 && cactusPosition === 1200){
         document.querySelector('.cactus').style.backgroundImage = "url('./images/turtle.png')";
         document.querySelector('.cactus').style.width = '90px';        
       }
       
-      if(pontos > 3000){
+      if(pontos > 3000 && cactusPosition === 1200){
         document.querySelector('.cactus').style.backgroundImage = "url('./images/goomba.png')";
 
         document.querySelector('.cactus').style.width = '90px';
